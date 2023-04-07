@@ -22,7 +22,6 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -56,7 +55,6 @@ export default function Post({ post, posts, preview }) {
           </>
         )}
       </Container>
-    </Layout>
   )
 }
 
