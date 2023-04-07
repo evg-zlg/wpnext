@@ -14,6 +14,12 @@
 
 /* Your own custom utilities */
 
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .has-text-align-left {
   @apply text-left;
 }
