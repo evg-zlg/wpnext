@@ -1,3 +1,4 @@
+
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
@@ -8,9 +9,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFanaly: {
-        sans: [golosFont, ...fontFamily.sans],
-      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
