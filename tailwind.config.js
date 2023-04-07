@@ -1,5 +1,3 @@
-import { golosFont } from './assets/fonts/localFontInit';
-
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
