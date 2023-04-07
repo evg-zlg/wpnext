@@ -1,3 +1,7 @@
+import { golosFont } from './assets/fonts/localFontInit';
+
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFanaly: {
+        sans: [golosFont, ...fontFamily.sans],
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
@@ -35,4 +42,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
