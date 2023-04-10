@@ -14,10 +14,11 @@
 
 /* Your own custom utilities */
 
-html {
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 .has-text-align-left {
@@ -108,3 +109,4 @@ html {
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
 }
+

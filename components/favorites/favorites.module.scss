@@ -1,0 +1,13 @@
+.hideTitle {
+  font-size: 0;
+  position: absolute;
+}
+
+.cardsGrid {
+  max-width: calc(60% - 1.875rem);
+  display: grid;
+  grid-gap: 1.25rem;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
