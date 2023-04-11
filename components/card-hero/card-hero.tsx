@@ -5,7 +5,7 @@ import TagOnCard from '../tag-on-card/tag-on-card';
 
 export default function CardHero({ blog }) {
   return (
-    <Link href={'/'} className={styles.cardLink}>
+    <Link href={`/blog/${blog.slug}`} className={styles.cardLink}>
       <article key={blog.id} className={styles.heroCard}>
         <TagOnCard tag="обзоры" />
         <span className={styles.imgWrapper}>

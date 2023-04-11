@@ -6,7 +6,7 @@ export default function BlogsLatest({ heroPost, morePosts }) {
   return (
     <ul className={styles.blogsLatest}>
       <li key={heroPost.id} className={styles.itemFirst}>
-        <Link href={'/'} className={styles.link}>
+        <Link href={`/blog/${heroPost.slug}`} className={styles.link}>
           <article className={styles.infoFirst}>
             <p className={styles.tag}>[новости]</p>
             <p className={styles.title}>{heroPost.title}</p>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Card({ blog }) {
   return (
     <article key={blog.id} className={styles.card}>
-      <Link href={'/'} className={styles.link}>
+      <Link href={`/blog/${blog.slug}`} className={styles.link}>
         <TagOnCard tag={'обзоры'} />
         <div className={styles.imgWrapper}>
           <Image
