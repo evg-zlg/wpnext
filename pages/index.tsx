@@ -1,31 +1,35 @@
 import styles from './home.module.scss';
 import wrapStyles from '../styles/wrapper.module.scss';
 import { GetStaticProps } from 'next';
-import { getLatestBlogsForHome } from '../lib/api';
+import { getFavoriteBlogsForHome, getLatestBlogsForHome } from '../lib/api';
 
 import BlogsFavorites from '../components/blogs-favorites/blogs-favorites';
 import BlogsLatest from '../components/blogs-latest/blogs-latest';
 
-export default function MainPage({ blogs: { edges } }) {
-  const heroPost = edges[0].node;
-  const morePosts = edges.slice(1);
+export default function MainPage({ latestBlogs: { edges }, favoriteBlogs}) {
+  
+  const heroFavoritePost = favoriteBlogs.nodes[0];
+  const moreFavoritePosts = favoriteBlogs.nodes.slice(1);
+
+  const heroLatestPost = edges[0].node;
+  const moreLatestPosts = edges.slice(1);
 
   return (
     <div className={wrapStyles.wrapper}>
       <h1 className={styles.hiddenText}>wpnext</h1>
       <section className={styles.firstSection}>
-        <BlogsFavorites heroPost={heroPost} morePosts={morePosts} />
-        <BlogsLatest heroPost={heroPost} morePosts={morePosts} />
+        <BlogsFavorites heroPost={heroFavoritePost} morePosts={moreFavoritePosts} />
+        <BlogsLatest heroPost={heroLatestPost} morePosts={moreLatestPosts} />
       </section>
     </div>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const blogs = await getLatestBlogsForHome();
-
+  const latestBlogs = await getLatestBlogsForHome();
+  const favoriteBlogs = await getFavoriteBlogsForHome();
   return {
-    props: { blogs },
+    props: { latestBlogs, favoriteBlogs },
     revalidate: 10,
   };
 };

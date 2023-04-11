@@ -8,8 +8,8 @@ export default function BlogsFavorites({ heroPost, morePosts }) {
       <h2 className={styles.hideTitle}>Свежие материалы</h2>
       <div className={styles.cardsGrid}>
         <CardHero blog={heroPost} />
-        {morePosts.map(({ node }) => {
-          return <Card key={node.slug} blog={node} />;
+        {morePosts.map((post) => {
+          return <Card key={post.slug} blog={post} />;
         })}
       </div>
     </>

@@ -59,29 +59,58 @@ export async function getAllPostsWithSlug() {
   return data?.posts;
 }
 
-export async function getLatestBlogsForHome() {
+// === my api ====
+export async function getFavoriteBlogsForHome() {
   const data = await fetchAPI(
-  `
-  query AllPosts {
-    posts(first: 4, where: { orderby: { field: DATE, order: DESC } }) {
-      edges {
-        node {
+    `
+    query FavoriteBlogs {
+      posts(first: 4, where: {categoryName: "favorites"}) {
+        nodes {
+          slug
           title
           excerpt
-          slug
           date
           featuredImage {
-            node {
-              sourceUrl
+                node {
+                  sourceUrl
+                }
+          }
+        }
+      }
+    }
+    `
+  );
+
+  console.log('data: ', data);
+
+  return data?.posts;
+}
+export async function getLatestBlogsForHome() {
+  const data = await fetchAPI(
+    `
+    query LatestBlogs {
+      posts(first: 4, where: { orderby: { field: DATE, order: DESC } }) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+              }
             }
           }
         }
       }
     }
-  }
-  `);
+    `
+  );
   return data?.posts;
 }
+
+// === end my api ====
 
 export async function getAllPostsForHome(preview) {
   const data = await fetchAPI(
