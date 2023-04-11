@@ -11,21 +11,22 @@
   align-items: flex-end;
   min-height: 18.75rem;
   width: 100%;
-  z-index: 1;
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: 0.2s ease-in-out;
   color: white;
 
   &:hover {
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.03), 0 40px 40px rgba(0, 0, 0, 0.1);
     .title {
       transform: translate3d(0, -20px, 0);
     }
     .imgWrapper {
       &::after {
         opacity: 1;
+        position: relative;
+        z-index: 1;
       }
-      
     }
   }
 }
@@ -36,7 +37,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 40;
   &::after {
     content: '';
     display: block;
@@ -55,13 +55,12 @@
 }
 
 .titleAndDate {
-  z-index: 50;
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.5) 0.85%,
     transparent 99.15%
   );
-
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: stretch;

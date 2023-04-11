@@ -12,13 +12,9 @@ export default function Header() {
           href="/"
           className="text-4xl font-medium transition-opacity hover:opacity-80 "
         >
-          wpnext.ru
+          wpnext
         </Link>
-        <nav className="flex gap-10">
-          <Link href="/blog" className="text-black">
-            Блог
-          </Link>
-        </nav>
+
         <a
           href="https://github.com/evg-zlg/wpnext"
           className="text-4xl font-medium transition-opacity hover:opacity-80 "

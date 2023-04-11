@@ -1,17 +1,15 @@
-import styles from './favorites.module.scss';
+import styles from './blogs-favorites.module.scss';
 import CardHero from '../card-hero/card-hero';
 import Card from '../card/card';
 
-export default function Favorites({ blogs }) {
+export default function BlogsFavorites({ heroPost, morePosts }) {
   return (
     <>
       <h2 className={styles.hideTitle}>Свежие материалы</h2>
       <div className={styles.cardsGrid}>
-        {blogs.map((blog, i) => {
-          if (i === 0) {
-            return <CardHero blog={blog}/>
-          }
-          return <Card blog={blog} />;
+        <CardHero blog={heroPost} />
+        {morePosts.map(({ node }) => {
+          return <Card key={node.slug} blog={node} />;
         })}
       </div>
     </>
