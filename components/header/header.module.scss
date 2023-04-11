@@ -8,6 +8,19 @@
     justify-content: center;
     gap: 20px;
   }
+}
 
+.logo {
+  font-size: 45px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
 
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.icon {
+  transform: scale(1.5);
+  margin: 6px 0 0 0
 }

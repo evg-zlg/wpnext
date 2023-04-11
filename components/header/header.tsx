@@ -10,18 +10,17 @@ export default function Header() {
       <header className={styles.header}>
         <Link
           href="/"
-          className="text-4xl font-medium transition-opacity hover:opacity-80 "
+          className={styles.logo}
         >
           wpnext
         </Link>
 
         <a
           href="https://github.com/evg-zlg/wpnext"
-          className="text-4xl font-medium transition-opacity hover:opacity-80 "
           target="_blank"
           rel="noreferrer"
         >
-          <Image priority src={gitHubIcon} alt="github wpnext" />
+          <Image priority className={styles.icon} src={gitHubIcon} alt="github wpnext" />
         </a>
       </header>
     </div>
