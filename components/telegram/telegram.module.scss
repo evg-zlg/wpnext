@@ -1,0 +1,52 @@
+.telegram {
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1.125rem;
+
+  @media (max-width: 60rem) {
+    justify-content: space-between;
+  }
+}
+
+.call {
+  max-width: 60%;
+  color: white;
+  @media (max-width: 50rem) {
+   max-width: none;
+  }
+}
+
+.title {
+  margin: 0 0 0.5em;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+}
+
+.subscribe {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: 1px solid;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+.imgWrapper {
+  @media (max-width: 60rem) {
+    transform: scale(0.8);
+  }
+  @media (max-width: 50rem) {
+    display: none;
+  }
+}
+
+.img {
+  transform: translate(0, 50px);
+  @media (max-width: 60rem) {
+    transform: translate(0, 25px);
+  }
+}

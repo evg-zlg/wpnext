@@ -81,8 +81,6 @@ export async function getFavoriteBlogsForHome() {
     `
   );
 
-  console.log('data: ', data);
-
   return data?.posts;
 }
 export async function getLatestBlogsForHome() {
