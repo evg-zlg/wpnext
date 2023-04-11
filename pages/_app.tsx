@@ -5,11 +5,11 @@ import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <main className={GolosFont.className}>
+    <main className={GolosFont.className}>
+      <Layout>
         <Component {...pageProps} />
-      </main>
-    </Layout>
+      </Layout>
+    </main>
   );
 }
 

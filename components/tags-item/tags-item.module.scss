@@ -1,0 +1,32 @@
+.tagsItem {
+  margin: 0 0 5rem 0;
+
+  @media (max-width: 68rem) {
+    padding: 0 0 0 1.125rem;    
+  }
+}
+.title {
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+}
+.count {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  color: rgba(22,28,38,.3); 
+}
+
+.items {
+  min-width: 1150px;
+  // overflow-x: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cardWrapper {
+  width: 215px;
+  display: flex;
+}
