@@ -9,13 +9,13 @@ export default function Card({ blog }) {
       <Link href={`/blog/${blog.slug}`} className={styles.link}>
         <TagOnCard tag={'обзоры'} />
         <div className={styles.imgWrapper}>
-          <Image
+          {blog.featuredImage && <Image
             className={styles.img}
             fill
             priority
             src={blog.featuredImage.node.sourceUrl}
             alt="image blog"
-          />
+          />}
         </div>
         <div className={styles.titleAndDate}>
           <h3 className={styles.title}>

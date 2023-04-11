@@ -20,7 +20,14 @@
   width: 100%;
   background-color: #1478c8;
   position: relative;
+  margin: 0 0 6rem 0;
 }
+
+.tagsSection {
+  overflow-x: hidden;
+}
+
 .hiddenText {
   font-size: 0;
 }
+

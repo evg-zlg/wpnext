@@ -60,6 +60,77 @@ export async function getAllPostsWithSlug() {
 }
 
 // === my api ====
+
+export async function getPostsDevelopment() {
+  const data = await fetchAPI(
+    `
+    query FavoriteBlogs {
+      posts( where: {categoryName: "development"}) {
+        nodes {
+          slug
+          title
+          excerpt
+          date
+          featuredImage {
+                node {
+                  sourceUrl
+                }
+          }
+        }
+      }
+    }
+    `
+  );
+
+  return data?.posts;
+}
+export async function getPostsPlagins() {
+  const data = await fetchAPI(
+    `
+    query PlaginsBlogs {
+      posts( where: {categoryName: "plaginyi-wordpress"}) {
+        nodes {
+          slug
+          title
+          excerpt
+          date
+          featuredImage {
+                node {
+                  sourceUrl
+                }
+          }
+        }
+      }
+    }
+    `
+  );
+
+  return data?.posts;
+}
+export async function getPostsCases() {
+  const data = await fetchAPI(
+    `
+    query PlaginsBlogs {
+      posts( where: {categoryName: "cases"}) {
+        nodes {
+          slug
+          title
+          excerpt
+          date
+          featuredImage {
+                node {
+                  sourceUrl
+                }
+          }
+        }
+      }
+    }
+    `
+  );
+
+  return data?.posts;
+}
+
 export async function getFavoriteBlogsForHome() {
   const data = await fetchAPI(
     `

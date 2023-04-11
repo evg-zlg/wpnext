@@ -1,5 +1,12 @@
 .header {
   padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,5 +29,5 @@
 
 .icon {
   transform: scale(1.5);
-  margin: 6px 0 0 0
+  margin: 6px 0 0 0;
 }

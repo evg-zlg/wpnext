@@ -9,13 +9,6 @@
   &:hover {
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.03), 0 40px 40px rgba(0, 0, 0, 0.1);
   }
-
-  @media (max-width: 68rem) {
-    &:last-child {
-      display: none;
-    }
-    
-  }
 }
 
 .link {

@@ -19,5 +19,13 @@
     flex-direction: column;
     min-width: 100%;
   }
+}
 
+.cardWrapper {
+  display: flex;
+  @media (max-width: 68rem) {
+    &:last-child {
+      display: none;
+    }
+  }
 }

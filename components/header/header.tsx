@@ -6,23 +6,27 @@ import styles from './header.module.scss';
 
 export default function Header() {
   return (
-    <div className={wrapStyles.wrapper}>
-      <header className={styles.header}>
-        <Link
-          href="/"
-          className={styles.logo}
-        >
-          wpnext
-        </Link>
+    <header className={styles.header}>
+      <div className={wrapStyles.wrapper}>
+        <div className={styles.content}>
+          <Link href="/" className={styles.logo}>
+            wpnext
+          </Link>
 
-        <a
-          href="https://github.com/evg-zlg/wpnext"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image priority className={styles.icon} src={gitHubIcon} alt="github wpnext" />
-        </a>
-      </header>
-    </div>
+          <a
+            href="https://github.com/evg-zlg/wpnext"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              priority
+              className={styles.icon}
+              src={gitHubIcon}
+              alt="github wpnext"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
   );
 }
