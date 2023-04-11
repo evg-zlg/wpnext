@@ -4,7 +4,6 @@ import Link from 'next/link';
 import TagOnCard from '../tag-on-card/tag-on-card';
 
 export default function CardHero({ blog }) {
-  console.log(blog)
   return (
     <Link href={`/blog/${blog.slug}`} className={styles.cardLink}>
       <article className={styles.heroCard}>
