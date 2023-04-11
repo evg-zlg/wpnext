@@ -10,7 +10,7 @@ export default function BlogsFavorites({ heroPost, morePosts }) {
         <CardHero blog={heroPost} />
         {morePosts.map((post) => (
           <div key={post.slug} className={styles.cardWrapper}>
-            <Card blog={post} />
+            <Card blog={post} tag={'избранное'}/>
           </div>
         ))}
       </div>

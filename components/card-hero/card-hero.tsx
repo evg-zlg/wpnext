@@ -7,7 +7,7 @@ export default function CardHero({ blog }) {
   return (
     <Link href={`/blog/${blog.slug}`} className={styles.cardLink}>
       <article className={styles.heroCard}>
-        <TagOnCard tag="обзоры" />
+        <TagOnCard tag="избранное" />
         <span className={styles.imgWrapper}>
           <Image
             fill

@@ -3,11 +3,11 @@ import Image from 'next/image';
 import TagOnCard from '../tag-on-card/tag-on-card';
 import Link from 'next/link';
 
-export default function Card({ blog }) {
+export default function Card({ blog, tag }) {
   return (
     <article key={blog.id} className={styles.card}>
       <Link href={`/blog/${blog.slug}`} className={styles.link}>
-        <TagOnCard tag={'обзоры'} />
+        <TagOnCard tag={tag} />
         <div className={styles.imgWrapper}>
           {blog.featuredImage && <Image
             className={styles.img}
