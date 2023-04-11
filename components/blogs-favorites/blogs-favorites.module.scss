@@ -9,5 +9,15 @@
   grid-gap: 1.25rem;
   gap: 1.25rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 
+  @media (max-width: 68rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 60rem) {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+}

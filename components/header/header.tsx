@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import gitHubIcon from '../../assets/icons/github.svg';
 import Image from 'next/image';
-import wrapStyles from '../../styles/wrapper.module.css';
+import wrapStyles from '../../styles/wrapper.module.scss';
 import styles from './header.module.scss';
 
 export default function Header() {

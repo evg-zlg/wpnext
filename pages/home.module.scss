@@ -6,6 +6,15 @@
   align-items: flex-start;
   gap: 3.75rem;
   margin: 5rem 0 6.25rem 0;
+
+  @media (max-width: 68rem) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 60rem) {
+    flex-direction: column;
+    margin: 1rem 0 1rem 0;
+  }
 }
 
 .hiddenText {

@@ -1,5 +1,5 @@
 import styles from './home.module.scss';
-import wrapStyles from '../styles/wrapper.module.css';
+import wrapStyles from '../styles/wrapper.module.scss';
 import { GetStaticProps } from 'next';
 import { getLatestBlogsForHome } from '../lib/api';
 
@@ -23,7 +23,7 @@ export default function MainPage({ blogs: { edges } }) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const blogs = await getLatestBlogsForHome();
-  
+
   return {
     props: { blogs },
     revalidate: 10,
