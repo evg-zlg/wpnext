@@ -8,6 +8,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import PostHeader from '../../components/post-header/post-header';
 import { getAllPostsWithSlug, getPost } from '../../lib/api';
 import TagsItem from '../../components/tags-item/tags-item';
+import { getFormattedDate } from '../../lib/utils';
 
 export default function Post({ post, posts }) {
   const router = useRouter();
@@ -34,7 +35,7 @@ export default function Post({ post, posts }) {
             <PostHeader
               title={post.title}
               coverImage={post.featuredImage}
-              date={post.date}
+              date={getFormattedDate(post.date)}
             />
             <div className={stylesWrap.postWrapper}>
               <div
