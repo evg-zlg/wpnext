@@ -1,84 +1,89 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Head from 'next/head'
-import { GetStaticPaths, GetStaticProps } from 'next'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import MoreStories from '../../components/more-stories'
-import PostHeader from '../../components/post-header'
-import SectionSeparator from '../../components/section-separator'
-import PostTitle from '../../components/post-title'
-import Tags from '../../components/tags'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import { CMS_NAME } from '../../lib/constants'
+import styles from './slug.module.scss';
+import stylesWrap from '../../styles/wrapper.module.scss';
 
-export default function Post({ post, posts, preview }) {
-  const router = useRouter()
-  const morePosts = posts?.edges
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
+import Head from 'next/head';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import PostHeader from '../../components/post-header/post-header';
+import { getAllPostsWithSlug, getPost } from '../../lib/api';
+import TagsItem from '../../components/tags-item/tags-item';
+import { getFormattedDate } from '../../lib/utils';
+
+export default function Post({ post, posts }) {
+  const router = useRouter();
+  const morePosts = posts?.nodes;
 
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
+    return <ErrorPage statusCode={404} />;
   }
 
   return (
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>
-                  {`${post.title} | Next.js Blog Example with ${CMS_NAME}`}
-                </title>
-                <meta
-                  property="og:image"
-                  content={post.featuredImage?.node.sourceUrl}
-                />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.featuredImage}
-                date={post.date}
-                author={post.author}
-                categories={post.categories}
+    <>
+      {router.isFallback ? (
+        <h1>Loading…</h1>
+      ) : (
+        <>
+          <Head>
+            <title>{`${post.title}`}</title>
+            <meta
+              property="og:image"
+              content={post.featuredImage?.node.sourceUrl}
+            />
+          </Head>
+          <article>
+            <PostHeader
+              title={post.title}
+              coverImage={post.featuredImage}
+              date={getFormattedDate(post.date)}
+            />
+            <div className={stylesWrap.postWrapper}>
+              <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{ __html: post.content }}
               />
-              <PostBody content={post.content} />
-              <footer>
-                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-              </footer>
-            </article>
+            </div>
+            {/* <footer>
+              {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
+            </footer> */}
+          </article>
 
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          </>
-        )}
-      </Container>
-  )
+          <div className={stylesWrap.wrapper}>
+            <div className={styles.morePosts}>
+              {morePosts.length > 0 && (
+                <TagsItem
+                  count={0}
+                  title={'Ещё почитать'}
+                  posts={morePosts}
+                />
+              )}
+            </div>
+          </div>
+        </>
+      )}
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async ({
   params,
-  preview = false,
-  previewData,
 }) => {
-  const data = await getPostAndMorePosts(params?.slug, preview, previewData)
+  const data = await getPost(params?.slug);
 
   return {
     props: {
-      preview,
       post: data.post,
       posts: data.posts,
     },
     revalidate: 10,
-  }
-}
+  };
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const allPosts = await getAllPostsWithSlug()
+  const allPosts = await getAllPostsWithSlug();
 
   return {
     paths: allPosts.edges.map(({ node }) => `/blog/${node.slug}`) || [],
     fallback: true,
-  }
-}
+  };
+};

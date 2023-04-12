@@ -179,6 +179,80 @@ export async function getLatestBlogsForHome() {
   return data?.posts;
 }
 
+export async function getPost(slug) {
+  const data = await fetchAPI(
+    `fragment PostFields on Post {
+      title
+      excerpt
+      slug
+      date
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+      categories {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+      tags {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+    query PostBySlug{
+      post(id: "${slug}", idType: SLUG) {
+        ...PostFields
+        content
+      }
+      posts(first: 5, where: { orderby: { field: DATE, order: DESC } }) {
+        nodes {
+          slug
+          title
+          excerpt
+          date
+          featuredImage {
+                node {
+                  sourceUrl
+                }
+          }
+        }
+      }
+    }
+  `
+  );
+  return data;
+}
+
+export async function getAllPosts() {
+  const data = await fetchAPI(
+    `
+    query AllPosts {
+      posts(first: 1000, where: { orderby: { field: DATE, order: DESC } }) {
+        nodes {
+          title
+          excerpt
+          slug
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  `
+  );
+
+  return data?.posts;
+  }
 // === end my api ====
 
 export async function getAllPostsForHome(preview) {
@@ -298,7 +372,7 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
             : ''
         }
       }
-      posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
+      posts(first: 5, where: { orderby: { field: DATE, order: DESC } }) {
         edges {
           node {
             ...PostFields

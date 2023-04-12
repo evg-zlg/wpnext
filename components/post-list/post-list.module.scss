@@ -1,0 +1,99 @@
+.grid {
+  display: grid;
+  grid-gap: 2.5rem 1.25rem;
+  gap: 2.5rem 1.25rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 72rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @media (max-width: 60rem) {
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 1.125rem;
+  }
+  @media (max-width: 40rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem;
+  }
+}
+
+.info {
+  grid-column: span 2;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 60rem) {
+    grid-column: span 3;
+    padding: 2rem 0 1.5rem;
+  }
+  @media (max-width: 40rem) {
+    grid-column: span 2;
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+.title {
+  font-size: 56px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #161c26;
+}
+
+.count {
+  color: rgba(22, 28, 38, 0.3);
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: bold;
+}
+
+.description {
+  margin: 2.5rem 0 0 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #161c26;
+}
+
+.cardHeroWrap {
+  grid-column: span 3;
+
+  @media (max-width: 72rem) {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 60rem) {
+    grid-column: span 3;
+  }
+
+  @media (max-width: 40rem) {
+    grid-column: span 2;
+  }
+}
+
+.cardWrap {
+  display: flex;
+
+  @media (max-width: 28rem) {
+    grid-column: span 2;
+  }
+}
+
+.showMore {
+  margin: 2.5rem 0 6rem 0;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  letter-spacing: -.2px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: rgba(218, 223, 229, 0.3);
+}

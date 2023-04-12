@@ -1,39 +1,23 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import Container from '../../components/container';
-import MoreStories from '../../components/more-stories';
-import HeroPost from '../../components/hero-post';
-import { getAllPostsForHome } from '../../lib/api';
+import { getAllPosts } from '../../lib/api';
+import PostList from '../../components/post-list/post-list';
 
-export default function BlogList({ allPosts: { edges } }) {
-  const heroPost = edges[0]?.node;
-  const morePosts = edges.slice(1);
-
+export default function BlogList({ allPosts: { nodes } }) {
   return (
     <>
       <Head>
+        <title>{`wpnext | blog`}</title>
       </Head>
-      <Container>
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.featuredImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
+      <PostList posts={nodes} />
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const allPosts = await getAllPostsForHome(preview);
+export const getStaticProps: GetStaticProps = async () => {
+  const allPosts = await getAllPosts();
   return {
-    props: { allPosts, preview },
+    props: { allPosts },
     revalidate: 10,
   };
 };

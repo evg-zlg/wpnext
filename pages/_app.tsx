@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import '../styles/index.css';
 import { GolosFont } from '../assets/fonts/_fonts';
-import Layout from '../components/layout';
+import Layout from '../components/old_components/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

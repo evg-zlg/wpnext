@@ -2,6 +2,7 @@ import styles from './card.module.scss';
 import Image from 'next/image';
 import TagOnCard from '../tag-on-card/tag-on-card';
 import Link from 'next/link';
+import { getFormattedDate } from '../../lib/utils';
 
 export default function Card({ blog, tag }) {
   return (
@@ -22,7 +23,7 @@ export default function Card({ blog, tag }) {
             {blog.title}
           </h3>
           <p className={styles.date}>
-            {blog.date}
+            {getFormattedDate(blog.date)}
           </p>
         </div>
       </Link>
