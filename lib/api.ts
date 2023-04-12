@@ -230,6 +230,29 @@ export async function getPost(slug) {
   return data;
 }
 
+export async function getAllPosts() {
+  const data = await fetchAPI(
+    `
+    query AllPosts {
+      posts(first: 21, where: { orderby: { field: DATE, order: DESC } }) {
+        nodes {
+          title
+          excerpt
+          slug
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  `
+  );
+
+  return data?.posts;
+  }
 // === end my api ====
 
 export async function getAllPostsForHome(preview) {

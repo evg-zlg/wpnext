@@ -2,7 +2,7 @@ import Card from '../card/card';
 import styles from './tags-item.module.scss';
 
 export default function TagsItem({ title, posts, count }) {
-  console.log(posts)
+  
   return (
     <div className={styles.tagsItem}>
       <h2 className={styles.title}>
