@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './blogs-latest.module.scss';
+import { getFormattedDate } from '../../lib/utils';
 
 export default function BlogsLatest({ heroPost, morePosts }) {
   
@@ -19,7 +20,7 @@ export default function BlogsLatest({ heroPost, morePosts }) {
           <Link href={`/blog/${node.slug}`} className={styles.link}>
             <article className={styles.info}>
               <p className={styles.title}>{node.title}</p>
-              <p className={styles.text}>{node.date}</p>
+              <p className={styles.text}>{getFormattedDate(node.date)}</p>
             </article>
           </Link>
         </li>
