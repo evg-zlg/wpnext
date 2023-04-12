@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import Container from '../../components/container';
 import MoreStories from '../../components/old_components/more-stories';
-import HeroPost from '../../components/hero-post';
 import { getAllPostsForHome } from '../../lib/api';
+import HeroPost from '../../components/old_components/hero-post';
 
 export default function BlogList({ allPosts: { edges } }) {
   const heroPost = edges[0]?.node;
@@ -13,7 +12,6 @@ export default function BlogList({ allPosts: { edges } }) {
     <>
       <Head>
       </Head>
-      <Container>
         {heroPost && (
           <HeroPost
             title={heroPost.title}
@@ -25,7 +23,6 @@ export default function BlogList({ allPosts: { edges } }) {
           />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
     </>
   );
 }
