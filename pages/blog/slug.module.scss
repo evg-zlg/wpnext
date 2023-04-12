@@ -1,0 +1,93 @@
+.morePosts {
+  overflow-x: hidden;
+}
+
+.content {
+
+  @media (max-width: 60rem) {
+    padding: 0 0.5rem;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote {
+    margin: 1.5rem 0;
+  }
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  ul,
+  ol {
+    padding: 0 0 0 1rem;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ul > li > ul,
+  ol > li > ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  ul > li > ul {
+    list-style-type: circle;
+  }
+  h2 {
+    font-size: 1.875rem;
+    line-height: 1.375;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.375;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.375;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  pre {
+    white-space: pre;
+    overflow-x: auto;
+    padding: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    border: 1px solid rgb(156 163 175);
+    background-color: rgb(243 244 246);
+  }
+  code {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  figcaption {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  blockquote {
+    border-left: 4px;
+    border-color: rgb(107 114 128);
+    background-color: rgb(243 244 246);
+    font-style: italic;
+    margin-left: 0;
+    padding: 1rem 1.125rem;
+    p {
+      margin-top: 0;
+    }
+    cite {
+      font-style: normal;
+    }
+  }
+  audio {
+    width: 100%;
+  }
+}

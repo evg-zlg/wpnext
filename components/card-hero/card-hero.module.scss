@@ -8,7 +8,6 @@
   @media (max-width: 68rem) {
     grid-column: span 2;
   }
-
 }
 
 .heroCard {
@@ -29,8 +28,6 @@
     .imgWrapper {
       &::after {
         opacity: 1;
-        position: relative;
-        z-index: 1;
       }
     }
   }
@@ -44,11 +41,13 @@
   right: 0;
   &::after {
     content: '';
+    position: relative;
     display: block;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-    opacity: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    opacity: 0.75;
     transition: 0.2s ease-in-out;
   }
 }
