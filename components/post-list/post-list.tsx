@@ -11,10 +11,10 @@ export default function PostList({ posts }) {
     <div className={styleWrapper.wrapper}>
       <ul className={styles.grid}>
         <li className={styles.info}>
-          <h1 className={styles.title}>Заголовок</h1>
-          <p className={styles.count}>3423</p>
+          <h1 className={styles.title}>Новости</h1>
+          <p className={styles.count}>{posts.length}</p>
           <p className={styles.description}>
-            Описание того, что представлено в этом разделе
+            Подборка интересных статей, обзоров и других полезных материалов 
           </p>
         </li>
         <li className={styles.cardHeroWrap}>
@@ -26,7 +26,7 @@ export default function PostList({ posts }) {
           </li>
         ))}
       </ul>
-      <button type="button" className={styles.showMore}>Показать ещё</button>
+      {/* <button type="button" className={styles.showMore}>Показать ещё</button> */}
     </div>
   );
 }

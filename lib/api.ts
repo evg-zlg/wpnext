@@ -234,7 +234,7 @@ export async function getAllPosts() {
   const data = await fetchAPI(
     `
     query AllPosts {
-      posts(first: 21, where: { orderby: { field: DATE, order: DESC } }) {
+      posts(first: 1000, where: { orderby: { field: DATE, order: DESC } }) {
         nodes {
           title
           excerpt
