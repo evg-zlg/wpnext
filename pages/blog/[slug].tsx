@@ -6,7 +6,6 @@ import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import PostHeader from '../../components/post-header/post-header';
-import PostTitle from '../../components/post-title';
 import { getAllPostsWithSlug, getPost } from '../../lib/api';
 import TagsItem from '../../components/tags-item/tags-item';
 
@@ -21,7 +20,7 @@ export default function Post({ post, posts }) {
   return (
     <>
       {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
+        <h1>Loading…</h1>
       ) : (
         <>
           <Head>

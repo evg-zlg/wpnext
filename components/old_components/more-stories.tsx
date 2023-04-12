@@ -11,7 +11,6 @@ export default function MoreStories({ posts }) {
           <PostPreview
             key={node.slug}
             title={node.title}
-            coverImage={node.featuredImage}
             date={node.date}
             author={node.author}
             slug={node.slug}
