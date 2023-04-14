@@ -14,7 +14,7 @@
   max-width: 60%;
   color: white;
   @media (max-width: 50rem) {
-   max-width: none;
+    max-width: none;
   }
 }
 
@@ -34,19 +34,22 @@
   font-size: 18px;
   line-height: 1.22;
 }
+.link {
+  display: block;
+  height: 100%;
+}
 
 .imgWrapper {
-  @media (max-width: 60rem) {
-    transform: scale(0.8);
-  }
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 130%;
+
   @media (max-width: 50rem) {
     display: none;
   }
 }
 
 .img {
-  transform: translate(0, 50px);
-  @media (max-width: 60rem) {
-    transform: translate(0, 25px);
-  }
+  object-fit: contain;
 }

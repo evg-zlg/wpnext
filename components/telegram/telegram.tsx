@@ -15,21 +15,17 @@ export default function Telegram() {
           Подписаться
         </a>
       </div>
-      <div className={styles.imgWrapper}>
-        <a
-          href="https://t.me/wpcraft"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
+      <a className={styles.link} href="https://t.me/wpcraft" rel="noreferrer noopener" target="_blank">
+        <div className={styles.imgWrapper}>
           <img
             className={styles.img}
             alt="telegram"
             src={
-              'https://wpcraft.ru/wp-content/uploads/2023/04/wordpress-woocommerce-telegram-461x576.png'
+              'https://wpcraft.ru/wp-content/uploads/2023/04/wordpress-woocommerce-telegram.png'
             }
           />
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   );
 }
