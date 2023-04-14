@@ -12,6 +12,14 @@ export default function Header() {
           <Link href="/" className={styles.logo}>
             wpnext
           </Link>
+          <nav className={styles.nav}>
+            <Link href="/ton" className={styles.navItem}>
+              Пример SSG
+            </Link>
+            <Link href="/blog" className={styles.navItem}>
+              Блог
+            </Link>
+          </nav>
 
           <a
             href="https://github.com/evg-zlg/wpnext"

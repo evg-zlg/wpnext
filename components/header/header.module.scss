@@ -24,6 +24,27 @@
   &:hover {
     opacity: 0.8;
   }
+
+  @media (max-width: 60rem) {
+    font-size: 30px;
+  }
+
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 60rem) {
+    gap: 10px;
+  }
+
+}
+
+.navItem {
+  color: #161c26;
+  line-height: 1.15;
+  letter-spacing: -.1px;
 }
 
 .icon {
