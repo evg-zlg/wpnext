@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps = async () => {
   blogsGrouped.push({
     title: 'Разработка',
     count: postsFromDevelopment.nodes.length,
-    posts: [...postsFromDevelopment.nodes.slice(0, 5)],
+    posts: [...postsFromDevelopment.nodes?.slice(0, 5)],
   });
   blogsGrouped.push({
     title: 'Плагины',
