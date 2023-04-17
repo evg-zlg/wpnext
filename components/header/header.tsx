@@ -12,6 +12,9 @@ export default function Header() {
           <Link href="/" className={styles.logo}>
             wpnext
           </Link>
+          <Link href="../../landing" className={styles.logo}>
+            landing
+          </Link>
 
           <a
             href="https://github.com/evg-zlg/wpnext"
