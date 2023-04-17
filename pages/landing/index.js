@@ -1,4 +1,4 @@
-import landingStyles from '../styles/landing.module.scss';
+import landingStyles from './landing.module.scss';
 
 
 const Landing = () =>{
