@@ -3,9 +3,9 @@ import Image from 'next/image';
 import styles from './ton-page-distribution.module.scss';
 import stylesWrapper from '../../../styles/wrapper.module.scss';
 
-import transactionsIcon from './transactions-icon.svg';
-import accountsIcon from './accounts-icon.svg';
-import validatorsIcon from './validators-icon.svg';
+import transactionsIcon from './icons/transactions-icon.svg';
+import accountsIcon from './icons/accounts-icon.svg';
+import validatorsIcon from './icons/validators-icon.svg';
 
 function TonPageDistribution() {
   return (

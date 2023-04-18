@@ -1,0 +1,136 @@
+.toncoin {
+  margin: 120px 0 100px 0;
+
+  @media (max-width: 1279px) {
+    margin: 100px 0 0 0;
+  }
+}
+.content {
+  max-width: 1320px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 64px 80px;
+  border-radius: 64px;
+  background: linear-gradient(
+    180deg,
+    #f7f9fb,
+    rgba(238, 242, 245, 0.8) 116.16%
+  );
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1439px) {
+    padding: 64px 160px;
+  }
+
+  @media (max-width: 1279px) {
+    padding: 64px 8vh;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 733px) {
+    flex-direction: column;
+  }
+
+}
+.info {
+  flex: 1 1 55%;
+
+  @media (max-width: 733px) {
+    text-align: center;
+  }
+
+}
+.title {
+  margin: 0 0 16px 0;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #04060b;
+  white-space: pre-line;
+
+  @media (max-width: 1279px) {
+    font-size: 32px;
+    line-height: 40px;
+    white-space: normal;
+  }
+
+
+}
+.description {
+  max-width: 560px;
+  color: #191f2f;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.links {
+  margin: 32px 0 0 0;
+  display: flex;
+  gap: 32px;
+  
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  @media (max-width: 733px) {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin: 16px 0 32px 0;
+  }
+
+  @media (max-width: 529px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}
+.link {
+  color: #08c;
+  user-select: none;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #0099e5;
+    .arrow {
+      border-color: #0099e5;
+    }
+  }
+}
+.arrow {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #08c;
+  border-top: none;
+  border-left: none;
+  transform: rotate(-45deg);
+  transition: 0.2s ease-in-out;
+}
+
+.imgWrapp {
+  height: 100%;
+  flex: 1 1 45%;
+
+}
+.img {
+  object-fit: contain;
+
+  @media (max-width: 1279px) {
+    max-height: 180px;
+  }
+
+}
