@@ -14,6 +14,11 @@
   font-weight: 700;
   text-align: center;
   white-space: pre-line;
+
+  @media (max-width: 1279px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 .description {
   margin: 0 auto;
@@ -24,10 +29,22 @@
   line-height: 28px;
   font-weight: 400;
   text-align: center;
+  @media (max-width: 905px) {
+    max-width: calc(100% - 32px);
+    min-width: calc(100% - 32px);
+  }
 }
 .counters {
   display: flex;
   gap: 35px;
+
+  @media (max-width: 1439px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 733px) {
+    flex-direction: column;
+  }
 }
 .item {
   flex: 1 1 33%;
@@ -36,19 +53,30 @@
   padding: 28px 24px;
   overflow: hidden;
   position: relative;
-
 }
 .itemTitle {
   color: #191f2f;
   font-size: 18px;
   line-height: 28px;
   margin: 0 0 16px 0;
+
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 8px 0;
+  }
 }
 .count {
   color: #04060b;
   font-size: 40px;
   line-height: 48px;
   font-weight: 600;
+  position: relative;
+  z-index: 1;
+  @media (max-width: 1279px) {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 .bgIcon {
   position: absolute;
