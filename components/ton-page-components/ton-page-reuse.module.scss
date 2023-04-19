@@ -26,6 +26,13 @@
     line-height: 30px;
   }
 }
+.titleColored {
+  display: block;
+  background: linear-gradient(90deg, #00a0f0 20%, #8fdaff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .subtitle {
   color: #04060b;
   font-weight: 700;

@@ -1,11 +1,14 @@
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 
-import { TonPageWelcome } from "../../components/ton-page-components";
-import { TonPageDistribution } from "../../components/ton-page-components";
-import { TonPageToncoin } from '../../components/ton-page-components';
-import { TonPageWallet } from '../../components/ton-page-components';
+import {
+  TonPageCommunity,
+  TonPageWelcome,
+  TonPageDistribution,
+  TonPageToncoin,
+  TonPageWallet,
+} from '../../components/ton-page-components';
 
-const inter = Inter({subsets: ['cyrillic']});
+const inter = Inter({ subsets: ['cyrillic'] });
 
 export default function TonPage() {
   return (
@@ -14,6 +17,7 @@ export default function TonPage() {
       <TonPageDistribution />
       <TonPageToncoin />
       <TonPageWallet />
+      <TonPageCommunity />
     </main>
   );
 }

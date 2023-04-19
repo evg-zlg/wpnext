@@ -41,10 +41,8 @@
   color: white;
 }
 .titleColored {
-  display: block;
-  background: linear-gradient(90deg, #00a0f0 20%, #8fdaff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  composes: titleColored from '../ton-page-reuse.module.scss';
+
 }
 .description {
   composes: description from '../ton-page-reuse.module.scss';
