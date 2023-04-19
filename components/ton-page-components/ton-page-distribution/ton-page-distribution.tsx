@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import styles from './ton-page-distribution.module.scss';
-import stylesWrapper from '../../../styles/wrapper.module.scss';
+import stylesReuse from '../ton-page-reuse.module.scss';
 
 import transactionsIcon from './icons/transactions-icon.svg';
 import accountsIcon from './icons/accounts-icon.svg';
@@ -10,7 +10,7 @@ import validatorsIcon from './icons/validators-icon.svg';
 function TonPageDistribution() {
   return (
     <section className={styles.distribution}>
-      <div className={stylesWrapper.tonWrapper}>
+      <div className={stylesReuse.tonWrapper}>
         <div className={styles.info}>
           <h2 className={styles.title}>
             {`Множество участников.

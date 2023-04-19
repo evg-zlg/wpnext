@@ -1,7 +1,5 @@
 import styles from './ton-page-toncoin.module.scss';
-import Image from 'next/image';
-
-import coins from '../../../assets/images/toncoin-coins.png';
+import stylesReuse from '../ton-page-reuse.module.scss';
 
 function TonPageToncoin() {
   return (
@@ -19,31 +17,31 @@ function TonPageToncoin() {
           </p>
           <div className={styles.links}>
             <a
-              className={styles.link}
+              className={stylesReuse.link}
               href="https://ton.org/en/toncoin#toncoin-purchase"
               target="_blank"
               rel="noreferrer"
             >
               Получить Toncoin
-              <span className={styles.arrow} />
+              <span className={stylesReuse.arrow} />
             </a>
             <a
-              className={styles.link}
+              className={stylesReuse.link}
               href="https://ton.org/en/toncoin#toncoin-use-cases"
               target="_blank"
               rel="noreferrer"
             >
               Примеры использования
-              <span className={styles.arrow} />
+              <span className={stylesReuse.arrow} />
             </a>
             <a
-              className={styles.link}
+              className={stylesReuse.link}
               href="https://ton.org/bridge"
               target="_blank"
               rel="noreferrer"
             >
               Бридж
-              <span className={styles.arrow} />
+              <span className={stylesReuse.arrow} />
             </a>
           </div>
         </div>

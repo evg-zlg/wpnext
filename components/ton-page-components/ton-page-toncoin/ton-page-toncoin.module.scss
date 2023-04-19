@@ -43,11 +43,11 @@
 
 }
 .title {
+  composes: title from '../ton-page-reuse.module.scss';
+
   margin: 0 0 16px 0;
   font-size: 48px;
   line-height: 56px;
-  font-weight: 700;
-  color: #04060b;
   white-space: pre-line;
 
   @media (max-width: 1279px) {
@@ -59,17 +59,16 @@
 
 }
 .description {
+  composes: description from '../ton-page-reuse.module.scss';
+
   max-width: 560px;
-  color: #191f2f;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
 
   @media (max-width: 1279px) {
     font-size: 16px;
     line-height: 24px;
   }
 }
+
 .links {
   margin: 32px 0 0 0;
   display: flex;
@@ -93,33 +92,7 @@
   }
 
 }
-.link {
-  color: #08c;
-  user-select: none;
-  white-space: nowrap;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  transition: 0.2s ease-in-out;
 
-  &:hover {
-    color: #0099e5;
-    .arrow {
-      border-color: #0099e5;
-    }
-  }
-}
-.arrow {
-  display: inline-block;
-  margin: 0 0 0 5px;
-  width: 10px;
-  height: 10px;
-  border: 3px solid #08c;
-  border-top: none;
-  border-left: none;
-  transform: rotate(-45deg);
-  transition: 0.2s ease-in-out;
-}
 
 .imgWrapp {
   height: 100%;

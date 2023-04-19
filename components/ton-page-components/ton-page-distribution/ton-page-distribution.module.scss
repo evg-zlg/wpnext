@@ -11,11 +11,9 @@
   margin: 0 0 48px 0;
 }
 .title {
+  composes: title from '../ton-page-reuse.module.scss';
+
   margin: 0 0 16px 0;
-  color: #04060b;
-  font-size: 48px;
-  line-height: 56px;
-  font-weight: 700;
   text-align: center;
   white-space: pre-line;
 
@@ -25,18 +23,18 @@
   }
 }
 .description {
+  composes: description from '../ton-page-reuse.module.scss';
+
   margin: 0 auto;
   max-width: 736px;
   min-width: 736px;
-  color: #191f2f;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
   text-align: center;
+
   @media (max-width: 905px) {
     max-width: calc(100% - 32px);
     min-width: calc(100% - 32px);
   }
+  
 }
 .counters {
   display: flex;

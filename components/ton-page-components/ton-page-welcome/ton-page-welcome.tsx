@@ -1,10 +1,10 @@
 import styles from './ton-page-welcome.module.scss';
-import stylesWrapper from '../../../styles/wrapper.module.scss';
+import stylesReuse from '../ton-page-reuse.module.scss';
 
 function TonPageWelcome() {
   return (
     <section className={styles.welcom}>
-      <div className={stylesWrapper.tonWrapper}>
+      <div className={stylesReuse.tonWrapper}>
         <div className={styles.content}>
           <div className={styles.infoWrapp}>
             <h1 className={styles.title}>

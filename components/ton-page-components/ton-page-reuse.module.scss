@@ -1,0 +1,70 @@
+.tonWrapper {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+
+  @media (max-width: 1439px) {
+    max-width: 1040px;
+  }
+}
+.title {
+  font-size: 64px;
+  line-height: 72px;
+  color: #04060b;
+  font-weight: 700;
+  padding-bottom: 16px;
+
+  @media (max-width: 1279px) {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  @media (max-width: 733px) {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  @media (max-width: 420px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.subtitle {
+}
+.description {
+  color: #191f2f;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.link {
+  color: #08c;
+  user-select: none;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #0099e5;
+    .arrow {
+      border-color: #0099e5;
+    }
+  }
+}
+.arrow {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #08c;
+  border-top: none;
+  border-left: none;
+  transform: rotate(-45deg);
+  transition: 0.2s ease-in-out;
+}
