@@ -37,6 +37,7 @@
 }
 .title {
   composes: title from '../ton-page-reuse.module.scss';
+  padding-bottom: 16px;
   color: white;
 }
 .titleColored {
@@ -47,6 +48,7 @@
 }
 .description {
   composes: description from '../ton-page-reuse.module.scss';
+  
   color: #d5d5d8;
   padding-bottom: 40px;
 

@@ -43,11 +43,9 @@
 
 }
 .title {
-  composes: title from '../ton-page-reuse.module.scss';
+  composes: subtitle from '../ton-page-reuse.module.scss';
 
   margin: 0 0 16px 0;
-  font-size: 48px;
-  line-height: 56px;
   white-space: pre-line;
 
   @media (max-width: 1279px) {

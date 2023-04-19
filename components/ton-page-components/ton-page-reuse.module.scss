@@ -12,7 +12,6 @@
   line-height: 72px;
   color: #04060b;
   font-weight: 700;
-  padding-bottom: 16px;
 
   @media (max-width: 1279px) {
     font-size: 44px;
@@ -28,6 +27,15 @@
   }
 }
 .subtitle {
+  color: #04060b;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+
+  @media (max-width: 1279px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 .description {
   color: #191f2f;
@@ -59,7 +67,7 @@
 }
 .arrow {
   display: inline-block;
-  margin: 0 0 0 5px;
+  margin: 0 5px 0 5px;
   width: 10px;
   height: 10px;
   border: 3px solid #08c;

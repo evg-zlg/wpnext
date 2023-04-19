@@ -7,8 +7,7 @@ function TonPageToncoin() {
       <div className={styles.content}>
         <div className={styles.info}>
           <h2 className={styles.title}>
-            {`Toncoin: будущее
-             валюты`}
+            {`Toncoin: будущее валюты`}
           </h2>
           <p className={styles.description}>
             Он используется для комиссий за транзакции, защиты блокчейна
