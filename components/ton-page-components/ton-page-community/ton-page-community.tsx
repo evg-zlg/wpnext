@@ -6,7 +6,6 @@ import stylesReuse from '../ton-page-reuse.module.scss';
 import telegramIcon from './icons/telegram-icon.svg';
 import twitterIcon from './icons/twitter-icon.svg';
 
-
 function TonPageCommunity() {
   return (
     <section className={styles.community}>
