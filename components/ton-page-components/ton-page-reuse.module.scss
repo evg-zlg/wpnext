@@ -55,31 +55,3 @@
     line-height: 18px;
   }
 }
-
-.link {
-  color: #08c;
-  user-select: none;
-  white-space: nowrap;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  transition: 0.2s ease-in-out;
-
-  &:hover {
-    color: #0099e5;
-    .arrow {
-      border-color: #0099e5;
-    }
-  }
-}
-.arrow {
-  display: inline-block;
-  margin: 0 5px 0 5px;
-  width: 10px;
-  height: 10px;
-  border: 3px solid #08c;
-  border-top: none;
-  border-left: none;
-  transform: rotate(-45deg);
-  transition: 0.2s ease-in-out;
-}

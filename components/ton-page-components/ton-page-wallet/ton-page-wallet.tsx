@@ -10,6 +10,7 @@ import walletPreviewImg from '../../../assets/images/wallet-preview.jpg';
 import linkArow from './icons/link-arrow-icon.svg';
 import tonkeeperIcon from './icons/tonkeeper-icon.svg';
 import walletIcon from './icons/wallet-icon.svg';
+import { TonLink } from '../ton-link/ton-link';
 
 function TonPageWallet() {
   const leftVideo = useRef<HTMLVideoElement>(null);
@@ -35,15 +36,10 @@ function TonPageWallet() {
       <div className={stylesReuse.tonWrapper}>
         <div className={styles.header}>
           <h2 className={styles.title}>Получи кошелёк и присоединяйся к TON</h2>
-          <a
-            className={stylesReuse.link}
+          <TonLink 
             href="https://ton.org/en/wallets"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Все варианты
-            <span className={stylesReuse.arrow} />
-          </a>
+            text="Все варианты"
+          />
         </div>
 
         <div className={styles.wallets}>
