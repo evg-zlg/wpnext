@@ -15,8 +15,9 @@ export default function TonPage() {
     <main className={inter.className}>
       <TonPageWelcome />
       <TonPageDistribution />
-      <TonPageToncoin />
       <TonPageWallet />
+      <TonPageToncoin />
+
       {/* <TonPageCommunity /> */}
     </main>
   );
