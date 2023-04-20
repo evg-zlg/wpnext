@@ -17,7 +17,7 @@ export default function TonPage() {
       <TonPageDistribution />
       <TonPageToncoin />
       <TonPageWallet />
-      {/* <TonPageCommunity /> */}
+      <TonPageCommunity />
     </main>
   );
 }

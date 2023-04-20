@@ -1,9 +1,10 @@
+import Image from 'next/image';
+
 import styles from './ton-page-community.module.scss';
 import stylesReuse from '../ton-page-reuse.module.scss';
 
 import telegramIcon from './icons/telegram-icon.svg';
 import twitterIcon from './icons/twitter-icon.svg';
-import Image from 'next/image';
 
 
 function TonPageCommunity() {
