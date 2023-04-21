@@ -25,6 +25,8 @@ export default function MainPage({
   const heroLatestPost = edges[0].node;
   const moreLatestPosts = edges.slice(1);
 
+  console.log(favoriteBlogs)
+
   return (
     <>
       <div className={wrapStyles.wrapper}>

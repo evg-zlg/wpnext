@@ -5,7 +5,7 @@ export function getFormattedDate(source): string {
     month: 'long',
     day: 'numeric',
   });
-  const splicedSymbol = formatter.format(date).slice(0, -2)
+  const splicedSymbol = formatter.format(date).slice(0, -3)
   
   return splicedSymbol;
 }

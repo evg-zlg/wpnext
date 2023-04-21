@@ -6,6 +6,7 @@ import {
   TonPageDistribution,
   TonPageToncoin,
   TonPageWallet,
+  TonPageApps,
 } from '../../components/ton-page-components';
 
 const inter = Inter({ subsets: ['cyrillic'] });
@@ -19,6 +20,7 @@ export default function TonPage() {
       <TonPageToncoin />
 
       {/* <TonPageCommunity /> */}
+      <TonPageApps />
     </main>
   );
 }

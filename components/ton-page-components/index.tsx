@@ -3,6 +3,7 @@ import { TonPageDistribution } from './ton-page-distribution/ton-page-distributi
 import { TonPageToncoin } from './ton-page-toncoin/ton-page-toncoin';
 import { TonPageWallet } from './ton-page-wallet/ton-page-wallet';
 import { TonPageCommunity } from './ton-page-community/ton-page-community';
+import { TonPageApps } from './ton-page-apps/ton-page-apps';
 
 export {
   TonPageWelcome,
@@ -10,4 +11,5 @@ export {
   TonPageToncoin,
   TonPageWallet,
   TonPageCommunity,
+  TonPageApps,
 };
