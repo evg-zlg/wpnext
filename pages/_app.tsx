@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import '../styles/index.css';
+import '../styles/block-library.scss';
 import { GolosFont } from '../assets/fonts/_fonts';
 import Layout from '../components/old_components/layout';
 
