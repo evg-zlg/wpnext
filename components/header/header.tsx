@@ -10,14 +10,13 @@ import gitHubIcon from '../../assets/icons/github.svg';
 export default function Header() {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
-  const addStyleForBurgerMenu = {
+  const translateXto0 = {
     transform: 'translateX(0)',
-    boxShadow: '-10px 0px 100px 10000px rgba(0, 0, 0, 0.5)',
   };
 
   const closeBurgerMenu = () => {
     setShowBurgerMenu(false);
-  }
+  };
 
   const openBurgerMenu = () => {
     setShowBurgerMenu(true);
@@ -30,31 +29,59 @@ export default function Header() {
           <Link href="/" className={styles.logo}>
             wpnext
           </Link>
-
-          <nav
-            className={styles.nav}
+          <div
+            onClick={() => closeBurgerMenu()}
+            className={styles.shadowZone}
             style={
               showBurgerMenu
-                ? addStyleForBurgerMenu
+                ? { display: 'block', opacity: 1, width: '100%' }
                 : {}
             }
+          />
+          <nav
+            className={styles.nav}
+            style={showBurgerMenu ? translateXto0 : {}}
           >
-            <Link href="/blog/category/favorites" className={styles.navItem} onClick={() => closeBurgerMenu()}>
+            <Link
+              href="/blog/category/favorites"
+              className={styles.navItem}
+              onClick={() => closeBurgerMenu()}
+            >
               Избранное
             </Link>
-            <Link href="/blog/category/development" className={styles.navItem} onClick={() => closeBurgerMenu()}>
+            <Link
+              href="/blog/category/development"
+              className={styles.navItem}
+              onClick={() => closeBurgerMenu()}
+            >
               Разработка
             </Link>
-            <Link href="/blog/category/plaginyi-wordpress" className={styles.navItem} onClick={() => closeBurgerMenu()}>
+            <Link
+              href="/blog/category/plaginyi-wordpress"
+              className={styles.navItem}
+              onClick={() => closeBurgerMenu()}
+            >
               Плагины
             </Link>
-            <Link href="/blog/category/cases" className={styles.navItem} onClick={() => closeBurgerMenu()}>
+            <Link
+              href="/blog/category/cases"
+              className={styles.navItem}
+              onClick={() => closeBurgerMenu()}
+            >
               Кейсы
             </Link>
-            <Link href="/ton" className={styles.navItem} onClick={() => closeBurgerMenu()}>
+            <Link
+              href="/ton"
+              className={styles.navItem}
+              onClick={() => closeBurgerMenu()}
+            >
               TON
             </Link>
-            <Link href="/blog" className={styles.navItem} onClick={() => closeBurgerMenu()}>
+            <Link
+              href="/blog"
+              className={styles.navItem}
+              onClick={() => closeBurgerMenu()}
+            >
               Все посты
             </Link>
           </nav>
