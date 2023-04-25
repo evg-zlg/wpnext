@@ -1,0 +1,107 @@
+.toncoin {
+  margin: 120px 0 0 0;
+
+  @media (max-width: 1279px) {
+    margin: 100px 0 0 0;
+  }
+}
+.content {
+  max-width: 1320px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 64px 80px;
+  border-radius: 64px;
+  background: linear-gradient(
+    180deg,
+    #f7f9fb,
+    rgba(238, 242, 245, 0.8) 116.16%
+  );
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1439px) {
+    padding: 64px 160px;
+  }
+
+  @media (max-width: 1279px) {
+    padding: 64px 8vh;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 733px) {
+    flex-direction: column;
+  }
+
+}
+.info {
+  flex: 1 1 55%;
+
+  @media (max-width: 733px) {
+    text-align: center;
+  }
+
+}
+.title {
+  composes: subtitle from '../ton-page-reuse.module.scss';
+
+  margin: 0 0 16px 0;
+  white-space: pre-line;
+
+  @media (max-width: 1279px) {
+    font-size: 32px;
+    line-height: 40px;
+    white-space: normal;
+  }
+
+
+}
+.description {
+  composes: description from '../ton-page-reuse.module.scss';
+
+  max-width: 560px;
+
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.links {
+  margin: 32px 0 0 0;
+  display: flex;
+  gap: 32px;
+  
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  @media (max-width: 733px) {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin: 16px 0 32px 0;
+  }
+
+  @media (max-width: 529px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}
+
+
+.imgWrapp {
+  height: 100%;
+  flex: 1 1 45%;
+
+}
+.img {
+  object-fit: contain;
+
+  @media (max-width: 1279px) {
+    max-height: 180px;
+  }
+
+}

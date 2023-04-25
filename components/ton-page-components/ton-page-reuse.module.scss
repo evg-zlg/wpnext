@@ -1,0 +1,62 @@
+.tonWrapper {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: 1439px) {
+    max-width: 1040px;
+  }
+
+  @media (max-width: 1279px) {
+    max-width: 952px;
+    
+  }
+}
+.title {
+  font-size: 64px;
+  line-height: 72px;
+  color: #04060b;
+  font-weight: 700;
+
+  @media (max-width: 1279px) {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  @media (max-width: 733px) {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  @media (max-width: 420px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.titleColored {
+  display: block;
+  background: linear-gradient(90deg, #00a0f0 20%, #8fdaff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #04060b;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+
+  @media (max-width: 1279px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.description {
+  color: #191f2f;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

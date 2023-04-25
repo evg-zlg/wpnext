@@ -61,6 +61,30 @@ export async function getAllPostsWithSlug() {
 
 // === my api ====
 
+export async function getPostsByCategory(category) {
+  const data = await fetchAPI(
+    `
+    query FavoriteBlogs {
+      posts( where: {categoryName: "${category}"}) {
+        nodes {
+          slug
+          title
+          excerpt
+          date
+          featuredImage {
+                node {
+                  sourceUrl
+                }
+          }
+        }
+      }
+    }
+    `
+  );
+
+  return data?.posts;
+}
+
 export async function getPostsDevelopment() {
   const data = await fetchAPI(
     `
@@ -234,7 +258,7 @@ export async function getAllPosts() {
   const data = await fetchAPI(
     `
     query AllPosts {
-      posts(first: 1000, where: { orderby: { field: DATE, order: DESC } }) {
+      posts(first: 1000) {
         nodes {
           title
           excerpt
@@ -252,7 +276,7 @@ export async function getAllPosts() {
   );
 
   return data?.posts;
-  }
+}
 // === end my api ====
 
 export async function getAllPostsForHome(preview) {
