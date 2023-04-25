@@ -24,7 +24,6 @@ export default function PostList({ posts, title, description }) {
           </li>
         ))}
       </ul>
-      {/* <button type="button" className={styles.showMore}>Показать ещё</button> */}
     </div>
   );
 }
