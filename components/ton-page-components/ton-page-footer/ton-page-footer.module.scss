@@ -1,0 +1,31 @@
+.footer {
+  margin: 120px 16px 0;
+  height: 80px;
+}
+
+.separator {
+  height: 1px;
+  background-color: #dfe5e8;
+  margin: 0 0 16px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  gap: 4px;
+}
+
+.link {
+  svg path {
+    transition: 0.2s ease-in-out;
+  }
+  &:hover {
+    svg path {
+      fill: #0099e5;
+    }
+  }
+}

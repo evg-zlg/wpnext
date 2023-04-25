@@ -89,10 +89,6 @@ function TonPageApps() {
             <p className={styles.boldDescript}>
               Открой для себя сотни других приложений и сервисов
             </p>
-            <TonLink
-              href="https://ton.org/images/home-page/app-cards/all_apps.png"
-              text="Обозор"
-            />
             <Image
               className={styles.imgLast}
               priority

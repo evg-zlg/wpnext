@@ -4,6 +4,7 @@ import { TonPageToncoin } from './ton-page-toncoin/ton-page-toncoin';
 import { TonPageWallet } from './ton-page-wallet/ton-page-wallet';
 import { TonPageCommunity } from './ton-page-community/ton-page-community';
 import { TonPageApps } from './ton-page-apps/ton-page-apps';
+import { TonPageFooter } from './ton-page-footer/ton-page-footer';
 
 export {
   TonPageWelcome,
@@ -12,4 +13,5 @@ export {
   TonPageWallet,
   TonPageCommunity,
   TonPageApps,
+  TonPageFooter,
 };
