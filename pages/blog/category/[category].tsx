@@ -9,6 +9,11 @@ export default function BlogListCategory({ posts }) {
   let description = '';
 
   switch (router.query.category) {
+    case 'favorites':
+      title = 'Избранное';
+      description = `
+      `;
+      break;
     case 'development':
       title = 'Разработка';
       description = `
@@ -55,7 +60,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const categories = ['development', 'plaginyi-wordpress', 'cases'];
+  const categories = [
+    'development',
+    'plaginyi-wordpress',
+    'cases',
+    'favorites',
+  ];
 
   return {
     paths: categories.map((cat) => `/blog/category/${cat}`) || [],
