@@ -1,16 +1,56 @@
 .apps {
-  
+  margin: 120px 0 0 0;
+  @media (max-width: 1279px) {
+    margin: 100px 16px 0;
+  }
+}
+
+.header {
+  margin: 0 0 48px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 733px) {
+    margin: 0 0 16px 0;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
+.title {
+  composes: subtitle from '../ton-page-reuse.module.scss';
+  margin: 0 8px 0 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 30%);
-  row-gap: 16px;
+  row-gap: 32px;
   justify-content: space-between;
+
+  @media (max-width: 1279px) {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, 32%);
+  }
+
+  @media (max-width: 1023px) {
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, 45%);
+    justify-content: center;
+  }
+
+  @media (max-width: 734px) {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, 100%);
+    justify-content: center;
+  }
 }
 
 .card {
-  flex: 1 0 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
   color: white;
   border-radius: 24px;
@@ -20,18 +60,65 @@
   transition: 0.2s ease-in-out;
 
   &:hover {
+    opacity: 0.9;
+
     .linkArrow {
       opacity: 1;
     }
   }
+
+  @media (max-width: 1279px) {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
-.cardOne {
+.cardMobile {
   composes: card;
 
-  background: linear-gradient(175.99deg, #428CEF 2.23%, #88BDFF 98.02%);
+  background: linear-gradient(175.99deg, #428cef 2.23%, #88bdff 98.02%);
+}
+
+.cardDomains {
+  composes: card;
+
+  background: #1e2531;
+}
+
+.cardVPN {
+  composes: card;
+
+  background: linear-gradient(180deg, #6c76ff 0%, #97a8ff 100%);
+}
+
+.cardFragment {
+  composes: card;
+
+  background: #262e37;
+}
+
+.cardFanton {
+  composes: card;
+
+  background: #4190f7;
+}
+.cardAllApps {
+  composes: card;
+
+  color: inherit;
+  padding: 28px 0 0;
+  background: #f7f9fb;
+
   &:hover {
-    opacity: 0.9;
+    background: #f0f4f8;
+  }
+
+  .boldDescript {
+    margin: 0 32px;
+  }
+
+  a {
+    margin: 16px 32px 0;
   }
 }
 
@@ -58,6 +145,7 @@
   line-height: 30px;
 }
 .description {
+  margin: 0 0 16px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -73,6 +161,12 @@
 }
 .img {
   max-width: 247px;
-  margin: 0 auto;
+  margin: auto auto 0;
   object-fit: contain;
+}
+
+.imgLast {
+  object-fit: contain;
+  margin: auto auto 0;
+  width: 100%;
 }

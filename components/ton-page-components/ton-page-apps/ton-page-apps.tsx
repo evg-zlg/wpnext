@@ -4,143 +4,102 @@ import Image from 'next/image';
 
 import linkArow from './icons/link-arrow-icon.svg';
 import mobileIcon from './icons/mobile-icon.svg';
-import borderImg from '../../../assets/images/phone-border.png';
+import domainsIcon from './icons/domains-icon.svg';
+import VPNIcon from './icons/VPN-icon.svg';
+import fragmentIcon from './icons/fragment-icon.svg';
+import fantonIcon from './icons/fanton-icon.svg';
+
 import toneMobileImg from '../../../assets/images/ton_mobile.png';
+import toneDomainsImg from '../../../assets/images/domains.png';
+import toneVPNImg from '../../../assets/images/vpn.png';
+import toneFragmentImg from '../../../assets/images/fragment.png';
+import toneFantonImg from '../../../assets/images/fanton.png';
+import toneAllAppsImg from '../../../assets/images/all_apps.png';
+import { TonLink } from '../ton-link/ton-link';
+import { CardWithApp } from './card-with-app';
 
 function TonPageApps() {
   return (
     <section className={styles.apps}>
       <div className={stylreReuse.tonWrapper}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>Приложения и сервисы</h2>
+          <TonLink href="https://ton.app/" text="Обзор экосистемы" />
+        </div>
         <div className={styles.grid}>
-          <a
+          <CardWithApp
+            styleClass={styles.cardMobile}
             href="https://tonmobile.com/"
+            titleIcon={mobileIcon}
+            titleText="Mobile"
+            boldDescript="Анонимная eSIM"
+            descript="Доступный и безопасный мобильный интернет-провайдер для дома и
+                      путешествий."
+            img={toneMobileImg}
+          />
+
+          <CardWithApp
+            styleClass={styles.cardDomains}
+            href="https://dns.ton.org/"
+            titleIcon={domainsIcon}
+            titleText="Domains"
+            boldDescript="Простой адрес"
+            descript="Кошелёк или веб-сайт можно легко найти в сети TON."
+            img={toneDomainsImg}
+          />
+
+          <CardWithApp
+            styleClass={styles.cardVPN}
+            href="https://www.tonvpn.me"
+            titleIcon={VPNIcon}
+            titleText="VPN"
+            boldDescript="Доступный VPN"
+            descript="Быстрый, безопасный и доступный способ защитить доступ в Интернет."
+            img={toneVPNImg}
+          />
+
+          <CardWithApp
+            styleClass={styles.cardFragment}
+            href="https://fragment.com/premium"
+            titleIcon={fragmentIcon}
+            titleText="Fragment"
+            boldDescript="Telegram Premium"
+            descript="Используй свой криптокошелек для оплаты подписки для себя и
+                      друзей."
+            img={toneFragmentImg}
+          />
+
+          <CardWithApp
+            styleClass={styles.cardFanton}
+            href="https://fan-ton.com/"
+            titleIcon={fantonIcon}
+            titleText="Fanton"
+            boldDescript="Игры и коллекции"
+            descript="Создай виртуальную футбольную команду, используя NFT-карты
+                      реальных игроков."
+            img={toneFantonImg}
+          />
+
+          <a
+            href="https://ton.org/images/home-page/app-cards/all_apps.png"
             target="_blank"
             rel="noreferrer"
-            className={styles.cardOne}
+            className={styles.cardAllApps}
           >
-            <Image
-              className={styles.linkArrow}
-              src={linkArow}
-              alt="link arrow"
-            />
-            <div className={styles.nameCard}>
-              <Image
-                src={mobileIcon}
-                alt="mobile icon"
-                className={styles.icon}
-              />
-              <h3 className={styles.subtitle}>Tonkeeper</h3>
-            </div>
-            <p className={styles.boldDescript}>Экосистема TON всегда с тобой</p>
-            <p className={styles.description}>
-              Защити криптовалюту, NFT и получай доступ к приложениям TON с
-              помощью Tonkeeper.
+            <p className={styles.boldDescript}>
+              Открой для себя сотни других приложений и сервисов
             </p>
+            <TonLink
+              href="https://ton.org/images/home-page/app-cards/all_apps.png"
+              text="Обозор"
+            />
             <Image
-              className={styles.img}
+              className={styles.imgLast}
               priority
-              src={toneMobileImg}
-              alt="tonkeeper"
+              src={toneAllAppsImg}
+              alt="all apps"
             />
           </a>
-          <a
-            href="https://tonmobile.com/"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.cardOne}
-          >
-            <Image
-              className={styles.linkArrow}
-              src={linkArow}
-              alt="link arrow"
-            />
-            <div className={styles.nameCard}>
-              <Image
-                src={mobileIcon}
-                alt="mobile icon"
-                className={styles.icon}
-              />
-              <h3 className={styles.subtitle}>Tonkeeper</h3>
-            </div>
-            <p className={styles.boldDescript}>Экосистема TON всегда с тобой</p>
-            <p className={styles.description}>
-              Защити криптовалюту, NFT и получай доступ к приложениям TON с
-              помощью Tonkeeper.
-            </p>
-            <Image
-              className={styles.img}
-              priority
-              src={toneMobileImg}
-              alt="tonkeeper"
-            />
-          </a>
-          <a
-            href="https://tonmobile.com/"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.cardOne}
-          >
-            <Image
-              className={styles.linkArrow}
-              src={linkArow}
-              alt="link arrow"
-            />
-            <div className={styles.nameCard}>
-              <Image
-                src={mobileIcon}
-                alt="mobile icon"
-                className={styles.icon}
-              />
-              <h3 className={styles.subtitle}>Tonkeeper</h3>
-            </div>
-            <p className={styles.boldDescript}>Экосистема TON всегда с тобой</p>
-            <p className={styles.description}>
-              Защити криптовалюту, NFT и получай доступ к приложениям TON с
-              помощью Tonkeeper.
-            </p>
-            <Image
-              className={styles.img}
-              priority
-              src={toneMobileImg}
-              alt="tonkeeper"
-            />
-          </a>
-          <a
-            href="https://tonmobile.com/"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.cardOne}
-          >
-            <Image
-              className={styles.linkArrow}
-              src={linkArow}
-              alt="link arrow"
-            />
-            <div className={styles.nameCard}>
-              <Image
-                src={mobileIcon}
-                alt="mobile icon"
-                className={styles.icon}
-              />
-              <h3 className={styles.subtitle}>Tonkeeper</h3>
-            </div>
-            <p className={styles.boldDescript}>Экосистема TON всегда с тобой</p>
-            <p className={styles.description}>
-              Защити криптовалюту, NFT и получай доступ к приложениям TON с
-              помощью Tonkeeper.
-            </p>
-            <Image
-              className={styles.img}
-              priority
-              src={toneMobileImg}
-              alt="tonkeeper"
-            />
-          </a>
-          <a href="" className={styles.card}></a>
-          <a href="" className={styles.card}></a>
-          <a href="" className={styles.card}></a>
-          <a href="" className={styles.card}></a>
-          <a href="" className={styles.card}></a>
         </div>
       </div>
     </section>

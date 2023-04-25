@@ -21,6 +21,11 @@
     font-size: 32px;
     line-height: 40px;
   }
+
+  @media (max-width: 520px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 .description {
   composes: description from '../ton-page-reuse.module.scss';
