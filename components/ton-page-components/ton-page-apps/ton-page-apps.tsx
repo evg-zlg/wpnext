@@ -81,7 +81,7 @@ function TonPageApps() {
           />
 
           <a
-            href="https://ton.org/images/home-page/app-cards/all_apps.png"
+            href="https://ton.app/"
             target="_blank"
             rel="noreferrer"
             className={styles.cardAllApps}
