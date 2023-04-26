@@ -1,3 +1,4 @@
+export const WORDPRESS_API_URL = 'https://wpcraft.ru/graphql';
 export const EXAMPLE_PATH = 'cms-wordpress'
 export const CMS_NAME = 'WordPress'
 export const CMS_URL = 'https://wordpress.org'

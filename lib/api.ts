@@ -1,4 +1,6 @@
-const API_URL = process.env.WORDPRESS_API_URL;
+import { WORDPRESS_API_URL } from "./constants";
+
+const API_URL = process.env.WORDPRESS_API_URL || WORDPRESS_API_URL;
 
 async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   const headers = { 'Content-Type': 'application/json' };
@@ -61,6 +63,32 @@ export async function getAllPostsWithSlug() {
 
 // === my api ====
 
+export async function get11PostsForBlog(count: number, cursor: string | null) {
+  const data = await fetchAPI(`
+    query postsForBlog {
+      posts(first: ${count}, after: "${cursor}") {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          slug
+          title
+          excerpt
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  return data
+}
+
 export async function getPostsByCategory(category) {
   const data = await fetchAPI(
     `
@@ -72,9 +100,9 @@ export async function getPostsByCategory(category) {
           excerpt
           date
           featuredImage {
-                node {
-                  sourceUrl
-                }
+            node {
+              sourceUrl
+            }
           }
         }
       }
