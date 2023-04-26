@@ -39,10 +39,11 @@ export default function AllBlogList({ data }) {
   );
 }
 
-export const getServerSideProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await get11PostsForBlog(21, null);
 
   return {
     props: { data },
+    revalidate: 60,
   };
 };
