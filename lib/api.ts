@@ -69,7 +69,7 @@ export async function get11PostsForBlog(count: number, cursor: string | null) {
   return data
 }
 
-export async function getPostsByCategory(category: string) {
+export async function getPostsByCategory(category: string | string[]) {
   const data = await fetchAPI(
     `
     query FavoriteBlogs {
@@ -211,7 +211,7 @@ export async function getLatestBlogsForHome() {
   return data?.posts;
 }
 
-export async function getPost(slug: string) {
+export async function getPost(slug: string | string[]) {
   const data = await fetchAPI(
     `fragment PostFields on Post {
       title
