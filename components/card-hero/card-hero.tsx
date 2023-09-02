@@ -10,13 +10,13 @@ export default function CardHero({ blog }) {
       <article className={styles.heroCard}>
         <TagOnCard tag="избранное" />
         <span className={styles.imgWrapper}>
-          <Image
+          {blog.featuredImage && <Image
             fill
             priority
             className={styles.img}
-            src={blog.featuredImage.node.sourceUrl}
+            src={blog.featuredImage.node?.sourceUrl}
             alt="image blog"
-          />
+          />}
         </span>
 
         <div className={styles.titleAndDate}>
