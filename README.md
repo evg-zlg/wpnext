@@ -9,7 +9,7 @@ This example showcases Next.js's [Incremental Static Regeneration](https://nextj
 
 ## Demo
 
-### [https://next-blog-wordpress.vercel.app](https://next-blog-wordpress.vercel.app)
+### [https://wpnext-example.vercel.app/](https://wpnext-example.vercel.app/)
 
 ## Deploy your own
 
