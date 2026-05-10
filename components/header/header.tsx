@@ -43,11 +43,11 @@ export default function Header() {
             style={showBurgerMenu ? translateXto0 : {}}
           >
             <Link
-              href="/blog/category/favorites"
+              href="https://wpcraft.ru/"
               className={styles.navItem}
               onClick={() => closeBurgerMenu()}
             >
-              Избранное
+              <strong>Оригинальный сайт</strong>
             </Link>
             <Link
               href="/blog/category/development"

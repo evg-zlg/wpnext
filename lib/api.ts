@@ -218,6 +218,7 @@ export async function getPost(slug: string | string[]) {
       excerpt
       slug
       date
+      link
       featuredImage {
         node {
           sourceUrl
@@ -242,6 +243,7 @@ export async function getPost(slug: string | string[]) {
       post(id: "${slug}", idType: SLUG) {
         ...PostFields
         content
+        link
       }
       posts(first: 5, where: { orderby: { field: DATE, order: DESC } }) {
         nodes {

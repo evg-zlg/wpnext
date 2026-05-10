@@ -19,11 +19,11 @@ export default function PostList({ posts, title, description }) {
           <p className={styles.description}>{description}</p>
         </li>
         <li className={styles.cardHeroWrap}>
-          <CardHero blog={postHero} />
+          {postHero && <CardHero blog={postHero} />}
         </li>
-        {anotherPosts.map((post) => (
+        {anotherPosts?.map((post) => (
           <li className={styles.cardWrap} key={post.slug}>
-            <Card blog={post} tag={'пост'} />
+            {post && <Card blog={post} tag={'пост'} />}
           </li>
         ))}
       </ul>

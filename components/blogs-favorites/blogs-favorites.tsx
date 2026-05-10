@@ -7,10 +7,10 @@ export default function BlogsFavorites({ heroPost, morePosts }) {
     <>
       <h2 className={styles.hideTitle}>Свежие материалы</h2>
       <div className={styles.cardsGrid}>
-        <CardHero blog={heroPost} />
-        {morePosts.map((post) => (
+        {heroPost && <CardHero blog={heroPost} />}
+        {morePosts?.map((post) => (
           <div key={post.slug} className={styles.cardWrapper}>
-            <Card blog={post} tag={'избранное'}/>
+            {post && <Card blog={post} tag={'избранное'}/>}
           </div>
         ))}
       </div>

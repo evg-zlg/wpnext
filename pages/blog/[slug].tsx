@@ -4,7 +4,7 @@ import stylesWrap from '../../styles/wrapper.module.scss';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next';
 import PostHeader from '../../components/post-header/post-header';
 import { getAllPostsWithSlug, getPost } from '../../lib/api';
 import TagsItem from '../../components/tags-item/tags-item';
@@ -62,25 +62,25 @@ export default function Post({ post, posts }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({
-  params,
-}) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const data = await getPost(params?.slug);
-
+  const originalLink = data?.post?.link;
+  
+  // Если есть оригинальная ссылка - делаем 301 редирект
+  if (originalLink) {
+    return {
+      redirect: {
+        destination: originalLink,
+        permanent: true, // 301 статус
+      },
+    };
+  }
+  
+  // Если нет ссылки или что-то пошло не так - показываем страницу
   return {
     props: {
       post: data.post,
       posts: data.posts,
     },
-    revalidate: 10,
-  };
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const allPosts = await getAllPostsWithSlug();
-
-  return {
-    paths: allPosts.edges.map(({ node }) => `/blog/${node.slug}`) || [],
-    fallback: true,
   };
 };
